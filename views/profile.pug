@@ -1,0 +1,42 @@
+extends layout
+
+block variables
+  - var title = "Dashboard"
+
+block content
+  h2.text-center #{user.displayName}'s Profile
+
+
+  if user.displayName == "Emma Maguire"
+    .row
+      .offset-sm-2.col-sm-8
+        .jumbotron.text-center
+          .profile
+            if(user.photos)
+            - for (var i=0; i<user.photos.length; i++) {
+              img.profilepic(src=user.photos[i].value, align='left')
+            - }
+            p #{user.displayName}
+            p #{user.id}
+            if(user.emails)
+            - for(var i=0; i<user.emails.length; i++) {
+              p Email: #{user.emails[i].value}
+            - }
+  else
+    .row
+      .offset-sm-2.col-sm-8
+        .jumbotron.text-center.
+          Welcome to your profile page, #{user.displayName}.
+    .row
+      .offset-sm-2.col-sm-8
+        .jumbotron.text-center
+          .profile
+            if(user.photos)
+            - for (var i=0; i<user.photos.length; i++) {
+              img(src=user.photos[i].value)
+            - }
+            p #{user.displayName} - #{user.id}
+            if(user.emails)
+            - for(var i=0; i<user.emails.length; i++) {
+              p Email: #{user.emails[i].value}
+            - }

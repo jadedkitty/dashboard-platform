@@ -1,0 +1,11 @@
+extends layout
+
+block variables
+  - var title = "Dashboard"
+
+block content
+  h2.text-center #{user.displayName}'s Dashboard
+    .row
+      .offset-sm-2.col-sm-8
+        .jumbotron.text-center.
+          Welcome to the Level 1 dashboard page, #{user.displayName}.

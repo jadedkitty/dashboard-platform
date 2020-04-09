@@ -1,0 +1,51 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.header .profilepic {
+  border-radius: 100%;
+  border-width: 3px;
+  border-color: white;
+  border-style: solid;
+  box-shadow: 0px 0px 4px #333333;
+  height: 100%;
+  width:15%;
+  margin-left: 10px;
+  cursor: pointer;
+  transition: 0.1s;
+}
+.header .profilepic:hover {
+  transform: scale(1.05, 1.05)
+}
+
+.profile > .profilepic {
+  border-radius: 0%;
+  border-width: 3px;
+  border-color: white;
+  border-style: solid;
+  box-shadow: 0px 0px 4px #333333;
+  height: 100%;
+  width:15%;
+  vertical-align: middle;
+}
+
+.profile > p {
+  margin-left: 20%;
+  font-size: medium;
+  font-weight: bold;
+  text-align: left;
+  vertical-align: middle;
+}
+
+.p-2 {
+  transition: background-color 0.1s;
+  border-radius: 4px;
+}
+.p-2:hover {
+  background-color: #ddd;
+}

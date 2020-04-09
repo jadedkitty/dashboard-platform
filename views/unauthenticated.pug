@@ -1,0 +1,9 @@
+extends layout
+
+block variables
+  - var title = "Unauthenticated"
+
+block content
+  h2.text-center You Must Log In to View This Page
+  p.text-center.
+    You must be signed in to view this page. Please #[a(href="/auth/zendesk", title="Login") login] to view this page.

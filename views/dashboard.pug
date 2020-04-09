@@ -1,0 +1,24 @@
+extends layout
+
+block variables
+  - var title = "Dashboard"
+
+block content
+  h2.text-center #{user.displayName}'s Dashboard
+
+
+  if user.displayName == "Emma Maguire"
+    .row
+      .offset-sm-2.col-sm-8
+        .jumbotron.text-center.
+          Welcome to your dashboard page UwU, glorious creator #{user.displayName}.
+  else if user.displayName == "Faith Phillips"
+    .row
+      .offset-sm-2.col-sm-8
+        .jumbotron.text-center.
+          Welcome to your dashboard page #{user.displayName}, wifey of Will uwuuuuuuu.
+  else
+    .row
+      .offset-sm-2.col-sm-8
+        .jumbotron.text-center.
+          Welcome to your dashboard page, #{user.displayName}.
