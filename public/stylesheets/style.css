@@ -1,10 +1,23 @@
+.preload {
+  -webkit-transition: none !important;
+  -moz-transition: none !important;
+  -ms-transition: none !important;
+  -o-transition: none !important;
+  transition: none !important;
+}
+
 body {
-  padding: 50px;
+  padding: 5px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
 a {
   color: #00B7FF;
+}
+
+.header .logo {
+  max-width: 225px;
+  height: 48px;
 }
 
 .header .profilepic {
@@ -48,4 +61,49 @@ a {
 }
 .p-2:hover {
   background-color: #ddd;
+}
+
+/* To center content in the containers */
+.dropzone { 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /*fixes dragging causing item to be .5* the size*/
+  flex-wrap: wrap; 
+}
+
+.wrapper { 
+  margin-bottom: 1em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Creating the dropzone boxes */
+.dropzone {
+  padding: 1em;
+  height: 100px;
+  width: 100px;
+  border-radius: 10px;
+  margin: 20px;
+  background-color: gray;
+}
+
+/* Creating the dragable boxes */
+.draggable {
+  
+  border-radius: 8px;
+  background-color: #ff8fde;
+  height: 80px;
+  width: 80px;
+}
+
+/* Occupied dropzone color */
+.draggable-dropzone--occupied {
+  background-color: lightblue;
+}
+
+/* Fix for color changing on container of the image */
+.occupied {
+  background-color: lightblue !important;
 }
