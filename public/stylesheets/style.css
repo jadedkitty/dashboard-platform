@@ -27,27 +27,28 @@ a {
   border-style: solid;
   box-shadow: 0px 0px 4px #333333;
   height: 100%;
-  width:15%;
+  width: 15%;
   margin-left: 10px;
   cursor: pointer;
   transition: 0.1s;
 }
+
 .header .profilepic:hover {
   transform: scale(1.05, 1.05)
 }
 
-.profile > .profilepic {
+.profile>.profilepic {
   border-radius: 0%;
   border-width: 3px;
   border-color: white;
   border-style: solid;
   box-shadow: 0px 0px 4px #333333;
   height: 100%;
-  width:15%;
+  width: 15%;
   vertical-align: middle;
 }
 
-.profile > p {
+.profile>p {
   margin-left: 20%;
   font-size: medium;
   font-weight: bold;
@@ -59,51 +60,32 @@ a {
   transition: background-color 0.1s;
   border-radius: 4px;
 }
+
 .p-2:hover {
   background-color: #ddd;
 }
 
-/* To center content in the containers */
-.dropzone { 
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  /*fixes dragging causing item to be .5* the size*/
-  flex-wrap: wrap; 
+.grid {
+  display: grid;
+  grid-template: 150px 150px 150px / 150px 150px 150px 150px;
+  grid-gap: 10px;
+  background-color: #ffffff;
+  padding: 10px;
 }
 
-.wrapper { 
-  margin-bottom: 1em;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-/* Creating the dropzone boxes */
-.dropzone {
-  padding: 1em;
-  height: 100px;
-  width: 100px;
-  border-radius: 10px;
-  margin: 20px;
-  background-color: gray;
-}
-
-/* Creating the dragable boxes */
 .draggable {
-  
-  border-radius: 8px;
-  background-color: #ff8fde;
-  height: 80px;
-  width: 80px;
+  background-color: #ff3946;
+  box-shadow: 10px 10px 10px #7777;
 }
 
-/* Occupied dropzone color */
-.draggable-dropzone--occupied {
-  background-color: lightblue;
+.draggable, .droppable.draggable-dropzone--occupied {
+  width: 100px;
+  height: 100px;
 }
 
-/* Fix for color changing on container of the image */
-.occupied {
-  background-color: lightblue !important;
+.droppable {
+  width: 100px;
+  height: 100px;
+  border: solid;
+  display: flex;
 }

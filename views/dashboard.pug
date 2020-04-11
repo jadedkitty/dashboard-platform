@@ -12,25 +12,24 @@ block content
       .offset-sm-2.col-sm-8
         .jumbotron.text-center.
           Welcome to your dashboard page UwU, glorious creator #{user.displayName}.
-  else if user.displayName == "Faith Phillips"
-    .row
-      .offset-sm-2.col-sm-8
-        .jumbotron.text-center.
-          Welcome to your dashboard page #{user.displayName}, wifey of Will uwuuuuuuu.
   else
     .row
       .offset-sm-2.col-sm-8
         .jumbotron.text-center.
           Welcome to your dashboard page, #{user.displayName}.
   
-  .wrapper
-    .dropzone.occupied(data-dropzone="1")
-      .draggable
-    .dropzone.occupied(data-dropzone="2")
-      .draggable
-    .dropzone.occupied(data-dropzone="3")
-      .draggable
-  .wrapper
-    .dropzone(data-dropzone="1")
-    .dropzone(data-dropzone="2")
-    .dropzone(data-dropzone="3")
+  .grid
+    .block
+      .droppable.draggable-dropzone--occupied
+        .draggable
+
+    .block
+      .droppable
+    .block
+      .droppable
+    .block
+      .droppable
+    .block
+      .droppable
+    .block
+      .droppable
