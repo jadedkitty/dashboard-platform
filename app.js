@@ -23,9 +23,9 @@ var dynamodb = new AWS.DynamoDB({ apiVersion: '2012-08-10' });
 
 
 // Zendesk OAUTH2.0 credentials
-var ZENDESK_CLIENT_ID = "dashboard-platform";
-var ZENDESK_CLIENT_SECRET = "e8666acee0c1d02a9668ad5a59387a77e41f5126ac4e4138982735bb3d1e7d57";
-var ZENDESK_SUBDOMAIN = "gcu";
+var ZENDESK_CLIENT_ID = "";
+var ZENDESK_CLIENT_SECRET = "";
+var ZENDESK_SUBDOMAIN = "";
 
 // Passport session setup.
 //   To support persistent login sessions, Passport needs to be able to
